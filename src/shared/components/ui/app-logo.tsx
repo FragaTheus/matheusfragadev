@@ -6,7 +6,7 @@ const AppLogo = () => {
     <Link href={"/"} className="flex items-center justify-center gap-2">
       <TbTerminal2 className="text-primary text-base md:text-lg" />
       <span className="text-sm md:text-base font-extrabold tracking-tighter">
-        FragaDev
+        matheusfragadev
       </span>
     </Link>
   );
