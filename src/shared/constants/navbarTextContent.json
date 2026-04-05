@@ -1,0 +1,20 @@
+{
+    "navbarContent":[
+        {
+            "link": "/",
+            "label": "Home" 
+        },
+        {
+            "link": "/projects",
+            "label": "Projetos"
+        },
+        {
+            "link": "/about",
+            "label": "Sobre"
+        },
+        {
+            "link": "/developers",
+            "label": "Dev"
+        }
+    ]
+}
