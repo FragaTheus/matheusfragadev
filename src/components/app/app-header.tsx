@@ -70,7 +70,7 @@ export default function AppHeader() {
         opacity: 1,
         y: 0,
       }}
-      className={`w-full h-16 bg-popover/50 backdrop-blur-sm border-b-2 fixed transition-transform duration-300 z-50${
+      className={`w-full h-16 bg-popover border-b-2 fixed transition-transform duration-300 z-50${
         isHeaderVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
