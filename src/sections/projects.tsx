@@ -26,6 +26,7 @@ const ProjectCard = ({ index }: ProjectCardProps) => {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3, delay: index * 0.5 }}
+      viewport={{ once: true }}
     >
       <Card className="hover:border-primary border-2 transition-all group duration-300">
         <CardHeader>
@@ -62,13 +63,14 @@ const ProjectCard = ({ index }: ProjectCardProps) => {
 export default function Projects() {
   return (
     <SectionWrapper>
-      <TextAnimate delay={1.8} startOnView className="font-bold text-3xl">
+      <TextAnimate startOnView once className="font-bold text-3xl">
         Title
       </TextAnimate>
       <motion.div
         initial={{ width: 0 }}
         whileInView={{ width: "5rem" }}
-        transition={{ duration: 0.5, delay: 2 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
         className="h-1 max-w-20 bg-primary mt-2"
       />
       <div className="w-full grid grid-cols-1 md:grid-cols-2 mt-8 gap-4">

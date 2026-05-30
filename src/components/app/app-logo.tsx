@@ -8,6 +8,7 @@ export default function AppLogo() {
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 0.8, duration: 0.5 }}
+        viewport={{ once: true }}
         className="tracking-tighter font-bold font-heading text-primary"
       >
         matheusfragadev

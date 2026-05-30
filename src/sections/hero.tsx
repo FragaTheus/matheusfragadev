@@ -1,12 +1,13 @@
 "use client";
 
+import AppTerminal from "@/components/app/app-terminal";
 import {
   ContainerLayout,
   SectionLayout,
 } from "@/components/layout/section-layout";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Terminal, TypingAnimation } from "@/components/ui/terminal";
+import { TypingAnimation } from "@/components/ui/terminal";
 import { TextAnimate } from "@/components/ui/text-animate";
 import { motion } from "framer-motion";
 
@@ -67,27 +68,12 @@ const HeroContent = () => {
 
 const HeroTerminal = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0, x: 20 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.5, delay: 1.2 }}
-      className="h-full w-full flex items-center justify-center"
-    >
-      <Terminal className="bg-card shadow-primary/10 hover:shadow-primary/40 transition-all shadow-lg">
-        <TypingAnimation delay={10}>
-          pnpm dlx shadcn@latest init
-        </TypingAnimation>
-        <TypingAnimation delay={10}>
-          pnpm dlx shadcn@latest init
-        </TypingAnimation>
-        <TypingAnimation delay={10}>
-          pnpm dlx shadcn@latest init
-        </TypingAnimation>
-        <TypingAnimation delay={10}>
-          pnpm dlx shadcn@latest init
-        </TypingAnimation>
-      </Terminal>
-    </motion.div>
+    <AppTerminal>
+      <TypingAnimation delay={10}>pnpm dlx shadcn@latest init</TypingAnimation>
+      <TypingAnimation delay={10}>pnpm dlx shadcn@latest init</TypingAnimation>
+      <TypingAnimation delay={10}>pnpm dlx shadcn@latest init</TypingAnimation>
+      <TypingAnimation delay={10}>pnpm dlx shadcn@latest init</TypingAnimation>
+    </AppTerminal>
   );
 };
 

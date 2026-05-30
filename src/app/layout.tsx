@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import AppHeader from "@/components/app/app-header";
 import AppBackground from "@/components/app/app-background";
+import AppFooter from "@/components/app/app-footer";
 
 const jetbrainsMonoHeading = JetBrains_Mono({
   subsets: ["latin"],
@@ -45,6 +46,7 @@ export default function RootLayout({
         <AppBackground />
         <AppHeader />
         {children}
+        <AppFooter />
       </body>
     </html>
   );

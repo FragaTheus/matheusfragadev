@@ -38,15 +38,20 @@ function SectionLayout({
   id,
   className,
   children,
+  isLast = false,
 }: {
   id?: string;
   className?: string;
   children: React.ReactNode;
+  isLast?: boolean;
 }) {
   return (
     <section
       id={id}
-      className={cn(`w-full my-16 md:my-18 lg:my-20`, className)}
+      className={cn(
+        `w-full ${isLast ? "mt-16 md:mt-18 lg:mt-24" : "my-16 md:my-18 lg:my-24"}`,
+        className,
+      )}
     >
       {children}
     </section>

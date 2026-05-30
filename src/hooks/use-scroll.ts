@@ -13,7 +13,7 @@ export const useHeaderScroll = () => {
       if (currentScrollY < lastScrollY) {
         setIsVisible(true);
       }
-      else if (currentScrollY - lastScrollY > 50) {
+      else if (currentScrollY - lastScrollY > 10) {
         setIsVisible(false);
       }
 
