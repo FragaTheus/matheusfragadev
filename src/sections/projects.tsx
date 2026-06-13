@@ -31,7 +31,7 @@ const ProjectCard = ({ index }: ProjectCardProps) => {
       <Card className="hover:border-primary border-2 transition-all group duration-300">
         <CardHeader>
           <BiLabel className="text-primary size-8" />
-          <CardTitle className="group-hover:text-primary mt-8 text-xl transition-colors duration-300">
+          <CardTitle className="group-hover:text-primary mt-8 text-lg transition-colors duration-300">
             Project Title
           </CardTitle>
         </CardHeader>

@@ -20,11 +20,11 @@ const SocialProofItem = ({ href, title, description, inverted }: Item) => {
           <HyperText
             startOnView
             delay={1.5}
-            className={`text-5xl font-bold ${inverted ? "text-primary" : ""}`}
+            className={`text-3xl lg:text-4xl  font-bold ${inverted ? "text-primary" : ""}`}
           >
             {title}
           </HyperText>
-          <HyperText startOnView delay={1.5} className="text-lg">
+          <HyperText startOnView delay={1.5} className="text-sm">
             {description}
           </HyperText>
         </div>
@@ -42,7 +42,7 @@ export default function SocialProof() {
         transition={{ duration: 0.5, delay: 1.5 }}
         className="bg-card border-y"
       >
-        <div className="grid grid-cols-1 lg:grid-cols-3 w-full max-w-7xl m-auto md:px-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 w-full max-w-7xl m-auto md:px-4">
           {items.map((item, index) => (
             <SocialProofItem key={index} {...item} />
           ))}
@@ -61,12 +61,12 @@ const items: Item[] = [
   {
     inverted: true,
     href: "#",
-    title: "+5",
+    title: "+4",
     description: "Projetos em produção",
   },
   {
     href: "#",
-    title: "+1000",
-    description: "Horas de desenvolvimento",
+    title: "+5",
+    description: "Empresas digitalizadas",
   },
 ];

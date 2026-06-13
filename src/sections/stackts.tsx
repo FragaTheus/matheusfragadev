@@ -20,7 +20,7 @@ const Item = ({ index }: { index: number }) => {
       <Card className="border-2 hover:border-secondary transition-all group">
         <CardContent className="flex flex-col items-center justify-center">
           <RiJavaFill className="text-secondary size-12" />
-          <CardTitle className="mt-4">Stack</CardTitle>
+          <CardTitle className="mt-4 text-sm font-bold">Stack</CardTitle>
         </CardContent>
       </Card>
     </motion.div>

@@ -12,7 +12,7 @@ const TechnicalItem = () => {
         <TextAnimate
           once
           startOnView
-          className="font-semibold text-base uppercase tracking-tighter font-heading"
+          className="font-semibold text-sm uppercase tracking-tighter font-heading"
         >
           Spring Boot
         </TextAnimate>

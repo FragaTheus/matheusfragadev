@@ -15,7 +15,7 @@ export default function AppTerminal({
       transition={{ duration: 0.5, delay: 1.2 }}
       className="h-full w-full flex items-center justify-center"
     >
-      <Terminal className="bg-card shadow-primary/10 hover:shadow-primary/40 transition-all shadow-lg">
+      <Terminal className="bg-card shadow-primary/10 hover:shadow-primary/40 transition-all shadow-lg max-w-sm max-h-min">
         {children}
       </Terminal>
     </motion.div>

@@ -70,7 +70,7 @@ export default function AppHeader() {
         opacity: 1,
         y: 0,
       }}
-      className={`w-full h-16 bg-popover border-b-2 fixed transition-transform duration-300 z-1000 ${
+      className={`w-full max-w-svw h-16 bg-popover border-b-2 fixed transition-transform duration-300 z-1000 ${
         isHeaderVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >

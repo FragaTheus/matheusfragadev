@@ -9,7 +9,7 @@ export default function Cta() {
   return (
     <SectionLayout className="w-full border-t-2 bg-popover" isLast>
       <ContainerLayout className="flex flex-col items-center justify-center text-center gap-8 p-12">
-        <TextAnimate once startOnView className="font-bold text-4xl">
+        <TextAnimate once startOnView className="font-bold text-3xl">
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </TextAnimate>
         <TextAnimate once startOnView className="text-sm font-light opacity-90">
@@ -19,8 +19,8 @@ export default function Cta() {
           maiores explicabo in tempora.
         </TextAnimate>
         <div className="flex flex-wrap items-center gap-4 justify-center">
-          <Button className="p-8 font-black text-xl">Entrar em contato</Button>
-          <Button className="p-8 font-black text-xl" variant={"outline"}>
+          <Button className="p-8 font-black text-lg">Entrar em contato</Button>
+          <Button className="p-8 font-black text-lg" variant={"outline"}>
             Ver projetos
           </Button>
         </div>

@@ -48,10 +48,7 @@ function SectionLayout({
   return (
     <section
       id={id}
-      className={cn(
-        `w-full ${isLast ? "mt-16 md:mt-18 lg:mt-24" : "my-16 md:my-18 lg:my-24"}`,
-        className,
-      )}
+      className={cn(`w-full ${isLast ? "mt-20" : "my-20"}`, className)}
     >
       {children}
     </section>
