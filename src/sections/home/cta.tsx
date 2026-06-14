@@ -10,13 +10,11 @@ export default function Cta() {
     <SectionLayout className="w-full border-t-2 bg-popover" isLast>
       <ContainerLayout className="flex flex-col items-center justify-center text-center gap-8 p-12">
         <TextAnimate once startOnView className="font-bold text-3xl">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Interessado no meu trabalho?
         </TextAnimate>
         <TextAnimate once startOnView className="text-sm font-light opacity-90">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, ut!
-          Deleniti molestiae reiciendis quo minima voluptatibus facilis
-          corporis, delectus quas officia a similique possimus, maxime illum
-          maiores explicabo in tempora.
+          Fique à vontade para entrar em contato ou conhecer mais detalhes sobre
+          os projetos desenvolvidos.
         </TextAnimate>
         <div className="flex flex-wrap items-center gap-4 justify-center">
           <Button className="p-8 font-black text-lg">Entrar em contato</Button>

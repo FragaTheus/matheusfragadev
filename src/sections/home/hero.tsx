@@ -60,7 +60,7 @@ const HeroContent = () => {
         className="mt-6 font-light opacity-90 font-mono -z-10 text-sm lg:text-base"
       >
         Desenvolvedor do LaLouise, atuo na construção de sistemas do início ao
-        fim — da modelagem do domínio até o deploy em produção.
+        fim, da modelagem do domínio até o deploy em produção.
       </TextAnimate>
       <Cta />
     </div>
