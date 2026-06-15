@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function AppLogo() {
   return (
-    <Link href={"/"}>
+    <Link href={"#home-hero"}>
       <motion.h2
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}

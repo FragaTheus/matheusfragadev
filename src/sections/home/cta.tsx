@@ -24,11 +24,11 @@ export default function Cta() {
             </Button>
           </Link>
           <Link
-            href={"https://github.com/FragaTheus?tab=repositories"}
+            href={"https://www.linkedin.com/in/matheusfragadev/"}
             target="_blank"
           >
             <Button className="p-8 font-black text-lg" variant={"outline"}>
-              Ver projetos
+              Conecte-se comigo
             </Button>
           </Link>
         </div>

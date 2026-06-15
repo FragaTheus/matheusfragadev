@@ -11,13 +11,19 @@ import { motion } from "framer-motion";
 import { ElementType } from "react";
 import {
   SiDocker,
+  SiGithubactions,
+  SiNextdotjs,
+  SiNginx,
   SiPostgresql,
   SiRabbitmq,
   SiSpringboot,
+  SiTailwindcss,
 } from "react-icons/si";
 import { cn } from "@/lib/utils";
 import { BiCloud } from "react-icons/bi";
 import { Button } from "@/components/ui/button";
+import { BsTypescript } from "react-icons/bs";
+import { DiLinux, DiRedis } from "react-icons/di";
 
 interface ItemProps {
   index: number;
@@ -113,5 +119,41 @@ const stacks = [
     Icon: BiCloud,
     label: "Cloud",
     className: "text-sky-500",
+  },
+  {
+    index: 6,
+    Icon: SiGithubactions,
+    label: "CI/CD",
+    className: "text-purple-500",
+  },
+  {
+    index: 7,
+    Icon: DiRedis,
+    label: "Redis",
+    className: "text-red-700",
+  },
+  {
+    index: 8,
+    Icon: BsTypescript,
+    label: "TypeScript",
+    className: "text-blue-500",
+  },
+  {
+    index: 9,
+    Icon: SiNextdotjs,
+    label: "Next.js",
+    className: "text-white",
+  },
+  {
+    index: 10,
+    Icon: SiTailwindcss,
+    label: "Tailwind",
+    className: "text-teal-500",
+  },
+  {
+    index: 11,
+    Icon: SiNginx,
+    label: "Nginx",
+    className: "text-green-500",
   },
 ] satisfies ItemProps[];

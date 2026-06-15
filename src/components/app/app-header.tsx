@@ -18,6 +18,7 @@ const HeaderActions = () => {
         <Link href="https://wa.me/5511974479570" target="_blank">
           <Button title="Entrar em contato">
             <BsWhatsapp />
+            <span className="hidden md:inline">Entrar em contato</span>
           </Button>
         </Link>
       </motion.div>
