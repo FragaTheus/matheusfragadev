@@ -14,9 +14,11 @@ import {
 } from "@/components/ui/card";
 import { TextAnimate } from "@/components/ui/text-animate";
 import { motion } from "framer-motion";
+import Link from "next/dist/client/link";
 import { BsQrCode } from "react-icons/bs";
-import { FcFactory } from "react-icons/fc";
+import { CgWebsite } from "react-icons/cg";
 import { GiFactory } from "react-icons/gi";
+import { GrGithub } from "react-icons/gr";
 
 interface ProjectCardProps {
   index: number;
@@ -24,6 +26,8 @@ interface ProjectCardProps {
   title: string;
   description: string;
   badges: string[];
+  docHref: string;
+  projectHref: string;
 }
 
 const ProjectCard = ({
@@ -32,6 +36,8 @@ const ProjectCard = ({
   title,
   description,
   badges,
+  docHref,
+  projectHref,
 }: ProjectCardProps) => {
   return (
     <motion.div
@@ -60,10 +66,19 @@ const ProjectCard = ({
           </div>
         </CardContent>
         <CardFooter>
-          <CardAction>
-            <Button variant={"outline"} className="text-xs">
-              Ver mais
-            </Button>
+          <CardAction className="gap-2 flex">
+            <Link href={docHref} className="w-full" target="_blank">
+              <Button variant={"outline"} className="text-xs">
+                <GrGithub />
+                <span>Documento</span>
+              </Button>
+            </Link>
+            <Link href={projectHref} className="w-full" target="_blank">
+              <Button variant={"outline"} className="text-xs">
+                <CgWebsite />
+                <span>Projeto</span>
+              </Button>
+            </Link>
           </CardAction>
         </CardFooter>
       </Card>
@@ -93,9 +108,17 @@ export default function Projects({}) {
             description={card.description}
             badges={card.badges}
             Icon={card.Icon}
+            docHref={card.docHref}
+            projectHref={card.projectHref}
           />
         ))}
       </div>
+      <Link
+        href="https://github.com/FragaTheus?tab=repositories"
+        target="_blank"
+      >
+        <Button className="mt-8">Ver todos os projetos</Button>
+      </Link>
     </SectionWrapper>
   );
 }
@@ -108,6 +131,8 @@ const cards = [
     description:
       "O LaLouise automatiza o controle de validade dos alimentos, substituindo processos manuais por uma operação mais rápida, segura e rastreável. A plataforma reduz desperdícios, fortalece os controles de qualidade e oferece maior confiança na gestão alimentar dos restaurantes.",
     badges: ["Multi-tenant", "Microsserviços", "Mensageria", "Cloud"],
+    docHref: "https://github.com/FragaTheus/lalouiseprinter",
+    projectHref: "https://lalouiseprinter-upsj.vercel.app",
   },
   {
     index: 1,
@@ -116,5 +141,8 @@ const cards = [
     description:
       "A Realiza fortaleceu sua presença digital por meio de um site institucional otimizado para mecanismos de busca. A solução simplifica a solicitação de orçamentos com envio de projetos e apoia o processo comercial de uma operação enxuta, reduzindo etapas manuais no contato com potenciais clientes.",
     badges: ["SEO", "SMTP", "UX/UI", "Google Analytics"],
+    docHref:
+      "https://github.com/FragaTheus/caldeiraria-realiza-site-institucional",
+    projectHref: "https://caldeirariarealiza.com.br/",
   },
 ] satisfies ProjectCardProps[];

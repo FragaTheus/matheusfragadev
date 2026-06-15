@@ -4,6 +4,7 @@ import {
 } from "@/components/layout/section-layout";
 import { Button } from "@/components/ui/button";
 import { TextAnimate } from "@/components/ui/text-animate";
+import Link from "next/link";
 
 export default function Cta() {
   return (
@@ -17,10 +18,19 @@ export default function Cta() {
           os projetos desenvolvidos.
         </TextAnimate>
         <div className="flex flex-wrap items-center gap-4 justify-center">
-          <Button className="p-8 font-black text-lg">Entrar em contato</Button>
-          <Button className="p-8 font-black text-lg" variant={"outline"}>
-            Ver projetos
-          </Button>
+          <Link href={"https://wa.me/5511974479570"} target="_blank">
+            <Button className="p-8 font-black text-lg">
+              Entrar em contato
+            </Button>
+          </Link>
+          <Link
+            href={"https://github.com/FragaTheus?tab=repositories"}
+            target="_blank"
+          >
+            <Button className="p-8 font-black text-lg" variant={"outline"}>
+              Ver projetos
+            </Button>
+          </Link>
         </div>
       </ContainerLayout>
     </SectionLayout>

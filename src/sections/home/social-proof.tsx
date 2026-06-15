@@ -6,29 +6,26 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 interface Item {
-  href: string;
   inverted?: boolean;
   title: string;
   description: string;
 }
 
-const SocialProofItem = ({ href, title, description, inverted }: Item) => {
+const SocialProofItem = ({ title, description, inverted }: Item) => {
   return (
     <div className="w-full h-full border-y md:border-x md:border-y-0 p-8">
-      <Link href={href}>
-        <div>
-          <HyperText
-            startOnView
-            delay={1.5}
-            className={`text-3xl lg:text-4xl  font-bold ${inverted ? "text-primary" : ""}`}
-          >
-            {title}
-          </HyperText>
-          <HyperText startOnView delay={1.5} className="text-sm">
-            {description}
-          </HyperText>
-        </div>
-      </Link>
+      <div>
+        <HyperText
+          startOnView
+          delay={1.5}
+          className={`text-3xl lg:text-4xl  font-bold ${inverted ? "text-primary" : ""}`}
+        >
+          {title}
+        </HyperText>
+        <HyperText startOnView delay={1.5} className="text-sm">
+          {description}
+        </HyperText>
+      </div>
     </div>
   );
 };
@@ -54,18 +51,15 @@ export default function SocialProof() {
 
 const items: Item[] = [
   {
-    href: "#",
     title: "3+",
     description: "Anos de experiência",
   },
   {
     inverted: true,
-    href: "#",
     title: "+4",
     description: "Projetos em produção",
   },
   {
-    href: "#",
     title: "+5",
     description: "Empresas digitalizadas",
   },

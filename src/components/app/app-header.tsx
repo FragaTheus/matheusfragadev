@@ -2,42 +2,12 @@
 
 import { useHeaderScroll } from "@/hooks/use-scroll";
 import { Button } from "../ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "../ui/dropdown-menu";
 import AppLogo from "./app-logo";
-import { FaFileAlt } from "react-icons/fa";
 import { BsWhatsapp } from "react-icons/bs";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const HeaderActions = () => {
-  const CurriculumMenu = () => {
-    return (
-      <DropdownMenu>
-        <DropdownMenuTrigger asChild>
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 1, duration: 0.5 }}
-          >
-            <Button>
-              <FaFileAlt />
-              <span className="hidden md:inline">Curriculo</span>
-            </Button>
-          </motion.div>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent>
-          <DropdownMenuItem>FullStack</DropdownMenuItem>
-          <DropdownMenuItem>Frontend</DropdownMenuItem>
-          <DropdownMenuItem>Backend</DropdownMenuItem>
-        </DropdownMenuContent>
-      </DropdownMenu>
-    );
-  };
-
   const ContactButton = () => {
     return (
       <motion.div
@@ -45,18 +15,35 @@ const HeaderActions = () => {
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 0.9, duration: 0.5 }}
       >
-        <Button variant={"outline"}>
-          <BsWhatsapp />
-          <span className="hidden md:inline">Entrar em contato</span>
-        </Button>
+        <Link href="https://wa.me/5511974479570" target="_blank">
+          <Button title="Entrar em contato">
+            <BsWhatsapp />
+          </Button>
+        </Link>
+      </motion.div>
+    );
+  };
+
+  const CurriculumButton = () => {
+    return (
+      <motion.div
+        initial={{ opacity: 0, x: 20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: 1, duration: 0.5 }}
+      >
+        <Link href="/curriculo.pdf" target="_blank" download>
+          <Button variant={"outline"} title="Baixar currículo">
+            Currículo
+          </Button>
+        </Link>
       </motion.div>
     );
   };
 
   return (
     <div className="flex items-center gap-2 h-full">
+      <CurriculumButton />
       <ContactButton />
-      <CurriculumMenu />
     </div>
   );
 };
@@ -76,7 +63,6 @@ export default function AppHeader() {
     >
       <div className="h-full w-full max-w-7xl m-auto flex items-center justify-between px-4">
         <AppLogo />
-        <div className="hidden lg:block">Nav</div>
         <HeaderActions />
       </div>
     </motion.header>

@@ -10,6 +10,8 @@ import { Button } from "@/components/ui/button";
 import { AnimatedSpan, TypingAnimation } from "@/components/ui/terminal";
 import { TextAnimate } from "@/components/ui/text-animate";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { BsGithub, BsWhatsapp } from "react-icons/bs";
 
 const HeroContent = () => {
   const Cta = () => {
@@ -18,18 +20,26 @@ const HeroContent = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 1.3 }}
+          transition={{ duration: 0.5, delay: 1.4 }}
         >
-          <Button className="px-8 py-4">Ver projetos</Button>
+          <Link href="https://github.com/FragaTheus/FragaTheus" target="_blank">
+            <Button className="px-8 py-4 gap-2 font-bold" variant={"outline"}>
+              <BsGithub />
+              <span>Ver Github</span>
+            </Button>
+          </Link>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 1.4 }}
+          transition={{ duration: 0.5, delay: 1.3 }}
         >
-          <Button className="px-8 py-4" variant={"outline"}>
-            Entrar em contato
-          </Button>
+          <Link href="https://wa.me/5511974479570" target="_blank">
+            <Button className="px-8 py-4 font-bold">
+              <BsWhatsapp />
+              <span>Entrar em contato</span>
+            </Button>
+          </Link>
         </motion.div>
       </div>
     );

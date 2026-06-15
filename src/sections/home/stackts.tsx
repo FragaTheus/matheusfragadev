@@ -6,25 +6,27 @@ import {
 } from "@/components/layout/section-layout";
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import { TextAnimate } from "@/components/ui/text-animate";
-import { RiJavaFill, RiNextjsFill, RiReactjsLine } from "react-icons/ri";
+import { RiJavaFill } from "react-icons/ri";
 import { motion } from "framer-motion";
 import { ElementType } from "react";
 import {
   SiDocker,
-  SiLinux,
   SiPostgresql,
   SiRabbitmq,
   SiSpringboot,
 } from "react-icons/si";
+import { cn } from "@/lib/utils";
+import { BiCloud } from "react-icons/bi";
+import { Button } from "@/components/ui/button";
 
 interface ItemProps {
   index: number;
   Icon: ElementType;
-  iconColor?: string;
+  className: string;
   label: string;
 }
 
-const Item = ({ index, Icon, iconColor, label }: ItemProps) => {
+const Item = ({ index, Icon, className, label }: ItemProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -34,7 +36,7 @@ const Item = ({ index, Icon, iconColor, label }: ItemProps) => {
     >
       <Card className="border-2 hover:border-secondary transition-all group">
         <CardContent className="flex flex-col items-center justify-center">
-          <Icon className={`size-12 text-muted ${iconColor}`} />
+          <Icon className={cn(`size-12 text-muted`, className)} />
           <CardTitle className="mt-4 text-sm font-bold">{label}</CardTitle>
         </CardContent>
       </Card>
@@ -64,11 +66,12 @@ export default function Stackts() {
               key={index}
               index={index}
               Icon={stack.Icon}
-              iconColor={stack.iconColor}
+              className={stack.className}
               label={stack.label}
             />
           ))}
         </div>
+        <Button className="mt-8">Ver curriculo completo</Button>
       </ContainerLayout>
     </SectionLayout>
   );
@@ -79,36 +82,36 @@ const stacks = [
     index: 0,
     Icon: RiJavaFill,
     label: "Java",
-    iconColor: "group-hover:text-red-500",
+    className: "text-red-500",
   },
   {
     index: 1,
     Icon: SiSpringboot,
     label: "Spring Boot",
-    iconColor: "group-hover:text-green-500",
+    className: "text-green-500",
   },
   {
     index: 2,
     Icon: SiPostgresql,
     label: "PostgreSQL",
-    iconColor: "group-hover:text-blue-500",
+    className: "text-blue-500",
   },
   {
     index: 3,
     Icon: SiRabbitmq,
     label: "RabbitMQ",
-    iconColor: "group-hover:text-orange-500",
+    className: "text-orange-500",
   },
   {
     index: 4,
     Icon: SiDocker,
     label: "Docker",
-    iconColor: "group-hover:text-blue-600",
+    className: "text-blue-600",
   },
   {
     index: 5,
-    Icon: SiLinux,
-    label: "Linux",
-    iconColor: "group-hover:text-yellow-400",
+    Icon: BiCloud,
+    label: "Cloud",
+    className: "text-sky-500",
   },
 ] satisfies ItemProps[];
