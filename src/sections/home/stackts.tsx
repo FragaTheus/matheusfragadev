@@ -24,7 +24,6 @@ import { BiCloud } from "react-icons/bi";
 import { Button } from "@/components/ui/button";
 import { BsTypescript } from "react-icons/bs";
 import { DiLinux, DiRedis } from "react-icons/di";
-import Link from "next/link";
 
 interface ItemProps {
   index: number;
@@ -78,9 +77,9 @@ export default function Stackts() {
             />
           ))}
         </div>
-        <Link href="/matheusfraga.pdf" target="_blank" download>
+        <a href="/matheusfraga.pdf" target="_blank" download>
           <Button className="mt-8">Ver curriculo completo</Button>
-        </Link>
+        </a>
       </ContainerLayout>
     </SectionLayout>
   );
