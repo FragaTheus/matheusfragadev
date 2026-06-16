@@ -132,7 +132,7 @@ const cards = [
       "O LaLouise automatiza o controle de validade dos alimentos, substituindo processos manuais por uma operação mais rápida, segura e rastreável. A plataforma reduz desperdícios, fortalece os controles de qualidade e oferece maior confiança na gestão alimentar dos restaurantes.",
     badges: ["Multi-tenant", "Microsserviços", "Mensageria", "Cloud"],
     docHref: "https://github.com/FragaTheus/lalouiseprinter",
-    projectHref: "https://lalouiseprinter-upsj.vercel.app",
+    projectHref: "https://lalouiseconsultoria.com.br/",
   },
   {
     index: 1,
