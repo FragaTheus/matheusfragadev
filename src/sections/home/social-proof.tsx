@@ -59,7 +59,7 @@ const items: Item[] = [
     description: "Projetos em produção",
   },
   {
-    title: "+5",
-    description: "Empresas digitalizadas",
+    title: "+6",
+    description: "Empresas apoiadas",
   },
 ];
