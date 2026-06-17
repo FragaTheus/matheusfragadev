@@ -61,7 +61,7 @@ const HeroContent = () => {
         once
         className="mt-8 font-bold tracking-tighter text-4xl lg:text-5xl xl:text-6xl"
       >
-        Transoformando problemas em domínios.
+        Transformando problemas em domínios.
       </TextAnimate>
       <TextAnimate
         once
@@ -83,18 +83,16 @@ const HeroTerminal = () => {
       <TypingAnimation startOnView>./gradlew clean build</TypingAnimation>
 
       <AnimatedSpan startOnView className="mt-4">
-        {"> Modelando o domínio..."}
+        {"> Modelando..."}
       </AnimatedSpan>
 
-      <AnimatedSpan startOnView>{"> Implementando..."}</AnimatedSpan>
+      <AnimatedSpan startOnView>{"> Planejando..."}</AnimatedSpan>
 
-      <AnimatedSpan startOnView>
-        {"> Integrando frontend e backend..."}
-      </AnimatedSpan>
+      <AnimatedSpan startOnView>{"> Desenvolvendo..."}</AnimatedSpan>
 
       <AnimatedSpan startOnView>{"> Executando testes..."}</AnimatedSpan>
 
-      <AnimatedSpan startOnView>{"> Publicando em produção..."}</AnimatedSpan>
+      <AnimatedSpan startOnView>{"> Publicando..."}</AnimatedSpan>
 
       <AnimatedSpan startOnView className="mt-4 text-secondary font-semibold">
         BUILD SUCCESSFUL

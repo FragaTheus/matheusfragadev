@@ -32,7 +32,7 @@ const HeaderActions = () => {
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 1, duration: 0.5 }}
       >
-        <a href="/matheusfraga.pdf" target="_blank" download>
+        <a href="/curriculo-matheusfraga.pdf" target="_blank" download>
           <Button variant={"outline"} title="Baixar currículo">
             Currículo
           </Button>

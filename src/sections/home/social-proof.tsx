@@ -2,7 +2,6 @@
 
 import { SectionLayout } from "@/components/layout/section-layout";
 import { HyperText } from "@/components/ui/hyper-text";
-import Link from "next/link";
 import { motion } from "framer-motion";
 
 interface Item {

@@ -63,7 +63,7 @@ export default function Stackts() {
             once
             className="opacity-90 font-light text-sm text-center mt-4"
           >
-            As tecnologias que uso para colocar soluções em produção
+            Algumas das tecnologias que uso para colocar os sistemas no ar
           </TextAnimate>
         </div>
         <div className="w-full mt-8 gap-4 grid grid-cols-2 lg:grid-cols-6">
@@ -77,7 +77,7 @@ export default function Stackts() {
             />
           ))}
         </div>
-        <a href="/matheusfraga.pdf" target="_blank" download>
+        <a href="/curriculo-matheusfraga.pdf" target="_blank" download>
           <Button className="mt-8">Ver curriculo completo</Button>
         </a>
       </ContainerLayout>
