@@ -14,8 +14,8 @@ export default function Cta() {
           Interessado no meu trabalho?
         </TextAnimate>
         <TextAnimate once startOnView className="text-sm font-light opacity-90">
-          Fique à vontade para entrar em contato ou cconectar-se comigo nas
-          redes sociais.
+          Fique à vontade para entrar em contato ou conectar-se comigo nas redes
+          sociais.
         </TextAnimate>
         <div className="flex flex-wrap items-center gap-4 justify-center">
           <Link href={"https://wa.me/5511974479570"} target="_blank">
